@@ -150,6 +150,31 @@ namespace T3
                 }
             }
              Console.WriteLine(" producto no encontrado"); 
+            static void Eliminar()
+        {
+            Console.WriteLine(" ingrese le codigo del prducto que desea eliminar:"); 
+            string codigoaeliminar = Console.ReadLine(); 
+
+            for ( int i = 0 ; i < cantidad ; i++)
+            {
+                if (codigos[i] == codigoaeliminar)
+                {
+                    for (int j = i ; j < cantidad - 1 ; j++ )
+                    {
+                        codigos[j] = codigos[j+ 1 ]; 
+                        nombres[j] = nombres[j + 1 ];
+                        precios[j] = precios[j + 1 ];
+                        stock[j] = stock[j + 1 ]; 
+                    }
+                    cantidad--;
+
+                    Console.WriteLine(" El producto se a eliminado correctamente "); 
+                    return; 
+                }
+            }
+            Console.WriteLine(" el producto no se encontro"); 
+            
+        } 
             
                     
             
