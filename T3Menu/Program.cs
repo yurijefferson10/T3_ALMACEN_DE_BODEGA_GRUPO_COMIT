@@ -116,6 +116,7 @@ namespace T3
                 Console.WriteLine(" precio: $/ " + precios[i]); 
                 Console.WriteLine(" stock:" + stock[i]);
             }
+         }
         static void Buscar()
         {
             Console.WriteLine("INGRESAR EL CODIGO DEL PRODUCTO QUE BUSCAS "); 
