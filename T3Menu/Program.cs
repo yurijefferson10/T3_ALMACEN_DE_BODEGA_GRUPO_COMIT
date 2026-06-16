@@ -124,10 +124,35 @@ namespace T3
                 }
                 if (!producto_encontrado)
             {
-                Console.WriteLine(" El producto que busca np se encutra en la bodega");
+                Console.WriteLine(" El producto que busca no se encuentra  en la bodega");
+            }    
+        }
+        static void modificar()
+             {
+            Console.WriteLine(" ingrese el codigo del producto:"); 
+            string codigoamodificar = Console.ReadLine(); 
 
+            for( int i = 0 ; i < cantidad; i++)
+            {
+                if(codigos[i]==codigoamodificar)
+                 {
+                    Console.WriteLine(" Nuevo nombre para el producto: "); 
+                    nombres[i] = Console.ReadLine(); 
+
+                    Console.WriteLine(" Nuevo precio del producto"); 
+                    precios[i] = double.Parse(Console.ReadLine()); 
+
+                    Console.WriteLine(" Nuevo tock en tienda"); 
+                    stock [i] = int.Parse(Console.ReadLine()); 
+
+                    Console.WriteLine(" producto modifcado correctamente "); 
+                    return;     
+                }
             }
-            }
+             Console.WriteLine(" producto no encontrado"); 
+            
+                    
+            
 
         
         
