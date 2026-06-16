@@ -106,5 +106,30 @@ namespace T3
             Console.WriteLine(" El producto se ha registrado correctamente:" ) ; 
                     
         }
+        static void Buscar()
+        {
+            Console.WriteLine("INGRESAR EL CODIGO DEL PRODUCTO QUE BUSCAS "); 
+            string codigoaBuscar= Console.ReadLine();
+            bool producto_encontrado = false ; 
+
+            for ( int i = 0 ; i < cantidad ; i++)
+                {
+                if ( codigos[i] == codigoaBuscar)
+                {
+                   Console.WriteLine(" producto encotnrado:" ); 
+                   Console.WriteLine("nombre: " + nombres[i] );
+                   Console.WriteLine("precios:$/" + precios[i]); 
+                   Console.WriteLine("stock:" + stock[i] ); 
+                   producto_encontrado =true ; 
+                }
+                if (!producto_encontrado)
+            {
+                Console.WriteLine(" El producto que busca np se encutra en la bodega");
+
+            }
+            }
+
+        
+        
     }
 }
