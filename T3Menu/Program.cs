@@ -176,15 +176,22 @@ namespace T3
                     Console.WriteLine(" ERROR posicion no valida ");
                     return;
                   }
-                Console.WriteLine(" CODIGOS ");
-                codigos[posicion] = Console.ReadLine();
-                Console.WriteLine(" nombres");
-                nombres[posicion] = Console.ReadLine();
-                Console.WriteLine("precios");
-                precios[posicion] = double.Parse(Console.ReadLine());
-                Console.WriteLine(" stock ");
-                stock[posicion] = int.Parse(Console.ReadLine());
-                cantidad++;
+                for (int i = cantidad; i > posicion; i--)
+                   {
+                     codigos[i] = codigos[i - 1];
+                     nombres[i] = nombres[i - 1];
+                     precios[i] = precios[i - 1];
+                     stock[i] = stock[i - 1];
+                    }
+                    Console.WriteLine(" CODIGOS ");
+                    codigos[posicion] = Console.ReadLine();
+                    Console.WriteLine(" nombres");
+                    nombres[posicion] = Console.ReadLine();
+                    Console.WriteLine("precios");
+                    precios[posicion] = double.Parse(Console.ReadLine());
+                    Console.WriteLine(" stock ");
+                    stock[posicion] = int.Parse(Console.ReadLine());
+                    cantidad++;
 
                Console.WriteLine("EL PRODUCTO SE INSERTO CORRECTAMENTE");
  
