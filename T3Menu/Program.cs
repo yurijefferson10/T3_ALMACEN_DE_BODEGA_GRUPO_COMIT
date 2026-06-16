@@ -133,6 +133,7 @@ namespace T3
                    Console.WriteLine("stock:" + stock[i] ); 
                    producto_encontrado =true ; 
                 }
+                }
                 if (!producto_encontrado)
             {
                 Console.WriteLine(" El producto que busca no se encuentra  en la bodega");
