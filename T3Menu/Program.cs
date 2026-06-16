@@ -66,5 +66,45 @@ namespace T3
             }
              while (opcion != 9);
         }
+        static void Registrar()
+        {
+            if ( cantidad == codigos.Length)
+            {
+                Console.WriteLine(" no hay suficiente espacio para mas productos"); 
+                return; 
+            }
+            Console.WriteLine("Codigo del producto: "); 
+
+            codigos[cantidad] = Console.ReadLine();
+            if ( codigos[cantidad]== "")
+            {
+                Console.WriteLine(" El codigo no puede ser vacio, agregar ubn valor" ); 
+                return ; 
+            }
+
+            Console.WriteLine("Nombre del producto: ");
+            nombres[cantidad] = Console.ReadLine();
+
+            Console.WriteLine("Precio del producto: "); 
+            precios[cantidad] = double.Parse(Console.ReadLine()); 
+            if (precios[cantidad]< 0 )
+            {
+                Console.WriteLine( " el preccio no tiene que ser negativo "); 
+                return ; 
+            }
+
+            Console.WriteLine("Stock del producto: ");
+            stock[cantidad] = int.Parse(Console.ReadLine()); 
+            
+            if ( stock[cantidad] < 0 )
+            {
+                Console.WriteLine(" el stock no puede ser negativo "); 
+                return;
+            }
+            cantidad++; 
+
+            Console.WriteLine(" El producto se ha registrado correctamente:" ) ; 
+                    
+        }
     }
 }
