@@ -206,11 +206,37 @@ namespace T3
             Console.WriteLine(" los productos fueron ordenados por precio de mayor a menor "); 
 
         } 
-            
-                    
-            
+             static void Resumen()
+        {
+            if (cantidad == 0 )
+            {
+                Console.WriteLine(" No  existe el producto en la bodega "); 
+                return; 
+            }
+            int mayor = 0 ; 
+            int menor = 0 ;
+            double total = 0 ; 
 
-        
-        
+            for ( int i = 0 ; i < cantidad ; i ++ )
+            {
+                total += precios[i] ; 
+                if ( precios[i] > precios[mayor])
+                {
+                    mayor = i ; 
+                }
+                else if ( precios[i] < precios[menor])
+                {
+                    menor = i; 
+                }
+
+            }
+            Console.WriteLine("-----RESUMEN DE LA BODEGA-------"); 
+            Console.WriteLine("total de productos :" + cantidad ); 
+            Console.WriteLine(" producto con mayor precio: " + nombres[mayor]); 
+            Console.WriteLine(" producto con menos precio:"+ nombres[menor]); 
+            Console.WriteLine(" total de precios: s/ " + total); 
+        } 
+
     }
+
 }
