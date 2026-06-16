@@ -175,6 +175,37 @@ namespace T3
             Console.WriteLine(" el producto no se encontro"); 
             
         } 
+            static void Ordenar()
+        {
+            for( int i = 0; i <cantidad  - 1; i++)
+            {
+                for (int j = 0 ; j < cantidad - 1 - i ; j++)
+                {
+                    if ( precios[j] < precios[j + 1 ])
+                    {
+                        double tprecios = precios[j]; 
+                        precios[j] = precios[j + 1 ]; 
+                        precios [j + 1 ] = tprecios; 
+
+                        string tcodigos = codigos[j];
+                        codigos[j] = codigos[j+ 1 ]; 
+                        codigos[j + 1] = tcodigos; 
+
+                        string tnombres = nombres [j]; 
+                        nombres[j] = nombres[j +1]; 
+                        nombres[j +1] = tnombres; 
+
+                        int tstock = stock [j]; 
+                        stock[j] = stock[j +1]; 
+                        stock[j+ 1 ] = tstock ;
+  
+                    }
+                    
+                }
+            }
+            Console.WriteLine(" los productos fueron ordenados por precio de mayor a menor "); 
+
+        } 
             
                     
             
