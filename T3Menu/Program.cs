@@ -160,6 +160,36 @@ namespace T3
                 }
             }
              Console.WriteLine(" producto no encontrado"); 
+        }
+            static void Insertar()
+            {
+                  if (cantidad == codigos.Length)
+                     {
+                       Console.WriteLine(" no hay suficiente espacio para mas productos ");
+                      return;
+                     }
+                 Console.WriteLine(" INgrese la posicion a insertar ( o a " + cantidad + "):");
+                int posicion = int.Parse(Console.ReadLine());
+
+               if (posicion < 0 || posicion > cantidad)
+                  {
+                    Console.WriteLine(" ERROR posicion no valida ");
+                    return;
+                  }
+                Console.WriteLine(" CODIGOS ");
+                codigos[posicion] = Console.ReadLine();
+                Console.WriteLine(" nombres");
+                nombres[posicion] = Console.ReadLine();
+                Console.WriteLine("precios");
+                precios[posicion] = double.Parse(Console.ReadLine());
+                Console.WriteLine(" stock ");
+                stock[posicion] = int.Parse(Console.ReadLine());
+                cantidad++;
+
+               Console.WriteLine("EL PRODUCTO SE INSERTO CORRECTAMENTE");
+ 
+                
+            }
             static void Eliminar()
         {
             Console.WriteLine(" ingrese le codigo del prducto que desea eliminar:"); 
