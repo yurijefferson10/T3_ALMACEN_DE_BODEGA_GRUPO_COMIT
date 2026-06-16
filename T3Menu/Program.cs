@@ -81,7 +81,6 @@ namespace T3
                 Console.WriteLine(" El codigo no puede ser vacio, agregar ubn valor" ); 
                 return ; 
             }
-
             Console.WriteLine("Nombre del producto: ");
             nombres[cantidad] = Console.ReadLine();
 
@@ -106,6 +105,17 @@ namespace T3
             Console.WriteLine(" El producto se ha registrado correctamente:" ) ; 
                     
         }
+         static void Mostrar()
+        {
+            Console.WriteLine("------LISTA DE LOS PRODUCTOS------"); 
+
+            for (int i = 0 ; i < cantidad ; i++ )
+            {
+                Console.WriteLine(" codigo:" + codigos[i]); 
+                Console.WriteLine(" nombre:" + nombres[i]); 
+                Console.WriteLine(" precio: $/ " + precios[i]); 
+                Console.WriteLine(" stock:" + stock[i]);
+            }
         static void Buscar()
         {
             Console.WriteLine("INGRESAR EL CODIGO DEL PRODUCTO QUE BUSCAS "); 
